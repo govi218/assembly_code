@@ -1,0 +1,16 @@
+POINTERS
+step 1: get a pointer to your data
+li $t3, 5
+la $t3, array
+li $t2, 7
+sw $t2, 4($t3)
+If offset is not known in advance:
+la $t3, array
+lw $t0, (counter_index)
+(Multiply offset to index)
+add $t3, $t3, $t0
+
+Example:
+Store 5 at index 4 in array.
+
+Offset = index * 4 (ONLY for int)
